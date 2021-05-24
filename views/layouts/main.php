@@ -29,7 +29,7 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => "Задание 3",
+        'brandLabel' => "Задание №3",
         'brandUrl' => ['/site/index'],
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
@@ -38,7 +38,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Основной сайт', 'url' => ['/site/index']],
+            ['label' => 'Основной сайт', 'url' => ['/site/index']], 
             ['label' => 'Личный кабинет', 'url' => ['/user/lk']],
             ['label' => 'Контакты', 'url' => ['/site/contact']],
             ['label' => 'Заявки', 'url' => ['/front/index'],'visible'=> !Yii::$app->user->isGuest],
