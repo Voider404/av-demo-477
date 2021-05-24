@@ -14,7 +14,7 @@ class FrontController extends RequestController
         $dataProvider = $searchModel->search(\Yii::$app->request->queryParams);
         $dataProvider->query->andWhere(['created_by'=> \Yii::$app->user->id])->orderBy('created_at DESC '); // Выбор всех записей текущего рпользователя и сортировка
 
-        $count = Request::find()->where(['status' => 'Решена'])->count();
+        $count = Request::find()->where(['status' => 'Решена'])->count(); // счётчик решённых заявок
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,

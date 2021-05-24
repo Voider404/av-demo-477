@@ -64,9 +64,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $request = Request::find()->where(['status' => 'Решена'])->limit(4)->orderBy('created_at DESC')->all();
+        $request = Request::find()->where(['status' => 'Решена'])->limit(4)->orderBy('created_at DESC')->all(); // Поиск запросов, где статус = решена, лимит 4 запроса и сортировка по дате создания (по новизне) 
 
-        return $this->render('index',['request'=>$request]);
+        return $this->render('index',['request'=>$request]); // рендер страницы
     }
 
     /**
